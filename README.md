@@ -1,35 +1,14 @@
-复现项目
-论文：Explainable Post hoc Portfolio Management  Financial Policy of a Deep Reinforcement  Learning agent
-github：https://github.com/aleedelarica/XDRL-for-finance
-PPO-github：https://github.com/deepcrypto/Reinforcement-learning-in-portfolio-management-/ tree/master?tab=readme-ov-file
-
-总结项目内容
-已有股票数据csv，训练DRL让它做投资组合得到尽可能多的回报。
-在2017年的新数据上测试效果
-利用SHAP、LIME、特征重要性可视化解释状态-动作对
-
-环境
-conda create -n money python=3.6
-conda acctivate money
-pip install requirements.txt
-注：可视化解释还需要安装pip install shap lime等 
-
-
-解释：
-将要解释的状态-动作对数据文件放到explainability.data下
-运行cleaner.py文件（注意在代码内修改文件名）得到cleand_state_actions.csv
-运行easy_explain.ipynb可视化解释
-
-
-
-
-
-
-基于您的项目复现经验，我来帮您修缮 README 文件，保持所有内容的同时提高可读性和专业性：
-
 # XDRL-for-Finance: Explainable Deep Reinforcement Learning for Portfolio Management
 
 基于论文《Explainable Post hoc Portfolio Management Financial Policy of a Deep Reinforcement Learning agent》的复现项目，使用可解释深度强化学习进行投资组合管理。
+
+总结项目内容
+
+已有股票数据csv，训练DRL让它做投资组合得到尽可能多的回报。
+
+在2017年的新数据上测试效果
+
+利用SHAP、LIME、特征重要性可视化解释状态-动作对
 
 ## 项目复现概述
 
@@ -56,12 +35,12 @@ conda activate money
 ```bash
 pip install -r requirements.txt
 
-# 额外安装可解释性工具包
+# 额外安装可解释性工具包，例如
 pip install shap lime
 ```
 
 ## 项目结构
-![项目架构图](images/architecture.png)
+![项目架构图](https://cdn.nlark.com/yuque/0/2025/png/36186524/1763115514276-a1ae30c8-6275-4e09-8854-eb81113f36dc.png?x-oss-process=image%2Fformat%2Cwebp)
 
 ## 快速开始
 
@@ -138,10 +117,12 @@ python explainability/cleaner.py
 生成 `cleaned_state_actions.csv`。
 
 #### 步骤3: 可视化解释
-运行 Jupyter notebook：
-```bash
-jupyter notebook explainability/easy_explain.ipynb
-```
+
+将要解释的状态-动作对数据文件放到explainability.data下
+
+运行cleaner.py文件（注意在代码内修改文件名）得到cleand_state_actions.csv
+
+运行easy_explain.ipynb可视化解释
 
 ## 可解释性技术
 
